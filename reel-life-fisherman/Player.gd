@@ -10,8 +10,6 @@ func _ready():
 	$Sprite.position.x = $AnimatedSprite.position.x - 30
 	$Sprite.position.y = $AnimatedSprite.position.y + 12
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -31,7 +29,7 @@ func _process(delta):
 		
 		
 	position += velocity * delta
-	position.x = clamp(position.x,0,screen_size.x-100)
+	position.x = clamp(position.x,0,screen_size.x)
 	
 	if velocity.x != 0:
 		#$AnimatedSprite.animation = "row"
@@ -43,7 +41,9 @@ func _process(delta):
 			$Sprite.position.x = $AnimatedSprite.position.x - 30
 			$AnimatedSprite.flip_h = false
 			$Sprite.flip_h = false
-		
+
+func start(pos):
+	position = pos
 
 		
 		
