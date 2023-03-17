@@ -1,17 +1,16 @@
 extends Node
 
 export(PackedScene) var fish_scene
-var score
+signal score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	$Player.hide()\
-
-func new_game():
-	score = 0
 	$Player.start($StartPosition.position)
 	$Player.show()
+	$Music.play()
+
+func new_game():
 	$StartTimer.start()
 	$HUD.show_message("Get Ready")
 
@@ -53,4 +52,4 @@ func _on_Player_hook():
 
 func _on_Hook_body_entered(body):
 	body.queue_free()
-	score += 5
+	emit_signal("score")

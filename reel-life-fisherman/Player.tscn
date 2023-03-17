@@ -147,7 +147,7 @@ script = ExtResource( 7 )
 scale = Vector2( 1, 0.6 )
 frames = SubResource( 21 )
 animation = "fish"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
