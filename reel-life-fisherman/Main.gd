@@ -6,7 +6,7 @@ var score
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	$Player.hide()
+	$Player.hide()\
 
 func new_game():
 	score = 0
@@ -50,3 +50,7 @@ func _on_Player_fish():
 func _on_Player_hook():
 	if get_node("AnimationPlayer").current_animation != "Fish":
 		get_node("AnimationPlayer").play("Hook")
+
+func _on_Hook_body_entered(body):
+	body.queue_free()
+	score += 5
