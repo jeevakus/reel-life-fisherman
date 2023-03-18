@@ -5,14 +5,9 @@
 [ext_resource path="res://Fish.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sounds/chiptune-music-pack-4/#65 A Day - Orchestrated.WAV" type="AudioStream" id=5]
-
-[sub_resource type="StreamTexture" id=11]
-flags = 4
-load_path = "res://.import/pixil-frame-0 (13).png-e869522bfa8b814ee5f63477edf60169.stex"
-
-[sub_resource type="StreamTexture" id=10]
-flags = 4
-load_path = "res://.import/Background.png-3c053efe278ec665cc10a00fc35a076c.stex"
+[ext_resource path="res://assets/art/pixel-art-maker/hook.png" type="Texture" id=6]
+[ext_resource path="res://assets/art/aqua-assets/Background.png" type="Texture" id=7]
+[ext_resource path="res://assets/art/sol/pixil-frame-0 (13).png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=6]
 resource_name = "Fish"
@@ -61,10 +56,6 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 22 ) ]
 }
 
-[sub_resource type="StreamTexture" id=9]
-flags = 4
-load_path = "res://.import/hook.png-67f4186abedfcf71abe8b4e3d9915350.stex"
-
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 80, 39.9999 )
 
@@ -81,14 +72,14 @@ fish_scene = ExtResource( 3 )
 margin_right = 500.0
 margin_bottom = 200.0
 rect_scale = Vector2( 2.05, 0.7 )
-texture = SubResource( 11 )
+texture = ExtResource( 8 )
 
 [node name="Underwater" type="TextureRect" parent="."]
 margin_top = 100.0
 margin_right = 1080.0
 margin_bottom = 2020.0
 rect_scale = Vector2( 0.95, 0.26 )
-texture = SubResource( 10 )
+texture = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Fish = SubResource( 6 )
@@ -113,7 +104,7 @@ scale = Vector2( 0.05, 0.05 )
 
 [node name="Hook" type="Sprite" parent="Player/Hook"]
 scale = Vector2( 1, 1 )
-texture = SubResource( 9 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
