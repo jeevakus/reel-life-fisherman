@@ -103,7 +103,6 @@ position = Vector2( 0, 22 )
 scale = Vector2( 0.05, 0.05 )
 
 [node name="Hook" type="Sprite" parent="Player/Hook"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
