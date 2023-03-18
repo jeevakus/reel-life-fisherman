@@ -41,7 +41,7 @@ func _on_FishTimer_timeout():
 	# Spawn the fish by adding it to the Main scene.
 	add_child(fish)
 
-# Reference of Animation Player from NULL Game Dev
+# Reference to Animation Player Code from NULL Game Dev
 func _on_Player_fish():
 	if get_node("AnimationPlayer").current_animation != "Hook":
 		get_node("AnimationPlayer").play("Fish")
