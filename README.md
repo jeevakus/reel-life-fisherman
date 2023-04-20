@@ -12,6 +12,8 @@ To reel in the line, the player can use the up arrow key or “W”.
 The hook cannot be reeled, until it reaches the bottom and the hook cannot be cast until it reaches back to the player.
 Catch as many fish as you can.
 
+![image](https://user-images.githubusercontent.com/126125847/233339307-5e964c1e-47e8-4d43-b8ff-dcace25d7261.png)
+
 Credits:
 Music: https://chillmindscapes.itch.io/free-chiptune-music-pack-4-chillmindscapes
 Sunset: https://gamer247.itch.io/sou
